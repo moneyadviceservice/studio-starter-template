@@ -1,4 +1,3 @@
-export * from "./Footer";
-export * from "./Header";
-export * from "./Layout";
-export * from "./Navigation";
+export * from './layout/Footer/Footer';
+export * from './layout/Header/Header';
+export * from './Navigation';

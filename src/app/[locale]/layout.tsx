@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 
 import "../globals.css";
-import Header from "@components/layout/Header/Header";
-import Footer from "@components/layout/Footer/Footer";
+import { Footer, Header, Navigation } from "../_components";
 
 export const metadata: Metadata = {
   title: "Studio Quickstart",
@@ -18,7 +17,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main>{children}</main>
+        <Navigation />
+        <main className="container p-4">{children}</main>
         <Footer />
       </body>
     </html>

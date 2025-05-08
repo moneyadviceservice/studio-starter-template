@@ -65,10 +65,7 @@ const Page = ({
   const { locale, slug } = params;
 
   return (
-    <Layout>
-      {/* <Studio slug={slug} locale={locale} mode={mode} /> */}
       <p>Test page</p>
-    </Layout>
   );
 };
 
