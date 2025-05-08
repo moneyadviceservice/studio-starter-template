@@ -21,6 +21,7 @@ export const TeaserCard = ({
   actionButtonTitle,
   actionButtonUrl,
 }: TeaserProps) => {
+  console.log("TeaserCard", image);
   const classes = type === "inline" ? "flex flex-row" : "flex flex-col";
   const TeaserContent = () => {
     return (
@@ -37,7 +38,7 @@ export const TeaserCard = ({
             )}
           >
             <Image
-              src={image}
+              src={`https:${image}`}
               alt={title}
               fill
               style={{ objectFit: "cover" }}
