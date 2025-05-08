@@ -1,68 +1,63 @@
-import {
-  CONTENTFUL_COMPONENTS,
-  ComponentDefinition,
-} from "@contentful/experiences-sdk-react";
-import StudioConfig from "../../../../studio.config";
-
-export * from "./ContactFormComponent";
+import { ComponentDefinition } from '@contentful/experiences-sdk-react';
+import StudioConfig from '../../../../studio.config';
 
 export const ContactFormDefinition: ComponentDefinition = {
-  id: "contact-form",
-  name: "Contact Form",
-  category: "Custom Components",
+  id: 'contact-form',
+  name: 'Contact Form',
+  category: 'Custom Components',
   builtInStyles: [
-    "cfMargin",
-    "cfBorderRadius",
-    "cfBorder",
-    "cfLineHeight",
-    "cfLetterSpacing",
-    "cfTextAlign",
-    "cfTextBold",
-    "cfHorizontalAlignment",
+    'cfMargin',
+    'cfBorderRadius',
+    'cfBorder',
+    'cfLineHeight',
+    'cfLetterSpacing',
+    'cfTextAlign',
+    'cfTextBold',
+    'cfHorizontalAlignment',
   ],
   variables: {
     cfPadding: {
-      type: "Text",
-      displayName: "Padding",
-      defaultValue: "10px 8px 10px 8px",
-      group: "style",
+      type: 'Text',
+      displayName: 'Padding',
+      defaultValue: '10px 8px 10px 8px',
+      group: 'style',
     },
     cfFontSize: {
-      type: "Text",
-      displayName: "Font size",
-      defaultValue: "18px",
+      type: 'Text',
+      displayName: 'Font size',
+      defaultValue: '18px',
 
-      group: "style",
+      group: 'style',
     },
     cfTextColor: {
-      type: "Text",
-      displayName: "Text color",
-      defaultValue: "#fff",
-      group: "style",
+      type: 'Text',
+      displayName: 'Text color',
+      defaultValue: '#fff',
+      group: 'style',
     },
     cfWidth: {
-      type: "Text",
-      displayName: "Width",
-      defaultValue: "all",
-      group: "style",
+      type: 'Text',
+      displayName: 'Width',
+      defaultValue: 'all',
+      group: 'style',
     },
     cfBackgroundColor: {
-      type: "Text",
-      displayName: "Background color",
-      defaultValue: StudioConfig.colors.primary["400"],
-      group: "style",
+      type: 'Text',
+      displayName: 'Background color',
+      defaultValue: StudioConfig.colors.primary['400'],
+      group: 'style',
     },
     cfFlexDirection: {
-      type: "Text",
-      displayName: "Flex direction",
-      defaultValue: "row",
-      group: "style",
+      type: 'Text',
+      displayName: 'Flex direction',
+      defaultValue: 'row',
+      group: 'style',
     },
     cfGap: {
-      type: "Text",
-      displayName: "Gap",
-      defaultValue: "8px 8px",
-      group: "style",
+      type: 'Text',
+      displayName: 'Gap',
+      defaultValue: '8px 8px',
+      group: 'style',
     },
     // borderRadius: {
     //   type: "Number",
@@ -71,14 +66,14 @@ export const ContactFormDefinition: ComponentDefinition = {
     //   group: "style",
     // },
     label: {
-      type: "Text",
-      displayName: "Label",
-      defaultValue: "Click me",
+      type: 'Text',
+      displayName: 'Label',
+      defaultValue: 'Click me',
     },
     url: {
-      type: "Text",
-      displayName: "URL",
-      defaultValue: "https://www.contentful.com/",
+      type: 'Text',
+      displayName: 'URL',
+      defaultValue: 'https://www.contentful.com/',
     },
     // icon: {
     //   type: "Text",
@@ -110,20 +105,20 @@ export const ContactFormDefinition: ComponentDefinition = {
     //   defaultValue: undefined,
     // },
     target: {
-      type: "Text",
+      type: 'Text',
       validations: {
         in: [
           {
-            value: "_blank",
-            displayName: "New Tab",
+            value: '_blank',
+            displayName: 'New Tab',
           },
           {
-            value: "_self",
-            displayName: "Same Tab",
+            value: '_self',
+            displayName: 'Same Tab',
           },
         ],
       },
-      defaultValue: "_self",
+      defaultValue: '_self',
     },
   },
 };
