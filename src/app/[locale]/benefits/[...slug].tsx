@@ -8,7 +8,9 @@ import {
   getSubCategoryPageTemplate,
   SubCategoryPageTemplate,
 } from "@/lib/contentful/api";
-import { Layout } from "@/components";
+import { Layout } from "@/app/_components";
+import Studio from "@/app/_studio/studio";
+import { MODE } from "@/lib/constants";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const data = await getAllSubCategoryPageTemplatesWithSlug();
@@ -34,27 +36,37 @@ type Props = {
   data: SubCategoryPageTemplate;
 };
 
-const Page = ({ data }: Props) => {
-  const livedata = useContentfulLiveUpdates(data);
-  const inspectorProps = useContentfulInspectorMode({
-    entryId: livedata?.sys?.id || "",
-  });
+const Page = ({
+  params,
+  searchParams,
+  data,
+}: Props & {
+  params: { locale: string; slug: string };
+  searchParams: { mode: MODE };
+}) => {
+  // const livedata = useContentfulLiveUpdates(data);
+  // const inspectorProps = useContentfulInspectorMode({
+  //   entryId: livedata?.sys?.id || "",
+  // });
 
-  if (!livedata) {
-    return (
-      <Layout>
-        <h1>Data not available</h1>
-      </Layout>
-    );
-  }
+  // if (!livedata) {
+  //   return (
+  //     <Layout>
+  //       <h1>Data not available</h1>
+  //     </Layout>
+  //   );
+  // }
 
-  const {
-    fields: { title },
-  } = livedata;
+  // const {
+  //   fields: { title },
+  // } = livedata;
+
+  const { mode } = searchParams;
+  const { locale, slug } = params;
 
   return (
     <Layout>
-      <h1 {...inspectorProps({ fieldId: "title" })}>{title}</h1>
+      <Studio slug={slug} locale={locale} mode={mode} />
     </Layout>
   );
 };
