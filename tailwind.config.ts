@@ -9,11 +9,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      container: {
-        center: true,
-      },
       colors: {
         ...StudioConfig.colors,
+      },
+      container: {
+        center: true,
       },
     },
   },
