@@ -8,13 +8,13 @@ import { FC } from 'react';
 
 import styles from './SiteButton.module.css';
 
-type SiteButtonProps = {
+type SiteButtonProps = Readonly<{
   label: string;
   url: string;
   target: '_self' | '_blank';
   borderRadius: string;
   icon: 'arrowRight' | 'arrowLeft' | 'chevronRight' | 'chevronLeft';
-};
+}>;
 
 const ICONS: Record<string, FC<any>> = {
   arrowRight: ArrowRightCircleIcon,

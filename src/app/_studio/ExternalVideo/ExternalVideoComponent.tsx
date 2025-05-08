@@ -1,8 +1,8 @@
 type ExternalVideoProps = {
-  url: string;
-  startAt: string;
-  showPlayerControls: boolean;
-  enablePrivacyEnhanceMode: boolean;
+  readonly url: string;
+  readonly startAt: string;
+  readonly showPlayerControls: boolean;
+  readonly enablePrivacyEnhanceMode: boolean;
 };
 export function ExternalVideoComponent(props: ExternalVideoProps) {
   const {
@@ -37,7 +37,7 @@ const getYoutubeIframeUrl = (props: ExternalVideoProps) => {
   if (!isYouTubeUrl(url)) return null;
 
   let query = '';
-  var start = timeToSeconds(startAt);
+  const start = timeToSeconds(startAt);
   if (start > 0) {
     query = 'start=' + start;
   }
@@ -66,7 +66,7 @@ function timeToSeconds(time: string) {
   const [minutes, seconds] = time.split(':').map(Number);
 
   // Calculate the total seconds
-  const totalSeconds = minutes! * 60 + seconds;
+  const totalSeconds = minutes * 60 + seconds;
 
   return totalSeconds;
 }

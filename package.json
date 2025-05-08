@@ -16,6 +16,7 @@
     "prettier": "^3.5.3",
     "tailwind-merge": "^3.2.0",
     "@contentful/experiences-sdk-react": "^1.9.0",
+    "@contentful/f36-components": "^4.80.1",
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
     "axios": "^1.7.3",
@@ -33,6 +34,7 @@
     "prompts": "^2.4.2",
     "react": "^18",
     "react-dom": "^18",
+    "react-router-dom": "^7.5.3",
     "swr": "^2.2.5"
   },
   "devDependencies": {
