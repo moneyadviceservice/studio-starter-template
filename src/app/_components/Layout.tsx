@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Header, Footer, Navigation } from "@/components";
+import { Footer, Header, Navigation } from "@/app/_components";
 
 type Props = {
   children: ReactNode;

@@ -12,25 +12,25 @@ import { Layout } from "@/app/_components";
 import Studio from "@/app/_studio/studio";
 import { MODE } from "@/lib/constants";
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const data = await getAllSubCategoryPageTemplatesWithSlug();
-  return {
-    paths: data?.map(({ fields }) => `/en/benefits/${fields.slug}`) ?? [],
-    fallback: true,
-  };
-};
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const data = await getAllSubCategoryPageTemplatesWithSlug();
+//   return {
+//     paths: data?.map(({ fields }) => `/en/benefits/${fields.slug}`) ?? [],
+//     fallback: true,
+//   };
+// };
 
-export const getStaticProps: GetStaticProps = async ({
-  params,
-  draftMode = false,
-}: GetStaticPropsContext) => {
-  const data = await getSubCategoryPageTemplate(
-    params?.slug as string,
-    draftMode
-  );
+// export const getStaticProps: GetStaticProps = async ({
+//   params,
+//   draftMode = false,
+// }: GetStaticPropsContext) => {
+//   const data = await getSubCategoryPageTemplate(
+//     params?.slug as string,
+//     draftMode
+//   );
 
-  return { props: { data } };
-};
+//   return { props: { data } };
+// };
 
 type Props = {
   data: SubCategoryPageTemplate;
@@ -66,7 +66,8 @@ const Page = ({
 
   return (
     <Layout>
-      <Studio slug={slug} locale={locale} mode={mode} />
+      {/* <Studio slug={slug} locale={locale} mode={mode} /> */}
+      <p>Test page</p>
     </Layout>
   );
 };
