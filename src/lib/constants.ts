@@ -1,2 +1,2 @@
-export const LOCALES = ['en-US', 'de-DE'];
-export type MODE = 'delivery' | 'preview';
+export const LOCALES = ["en-US", "de-DE", "en-GB"];
+export type MODE = "delivery" | "preview";

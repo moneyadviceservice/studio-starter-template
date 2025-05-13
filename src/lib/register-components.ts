@@ -11,6 +11,7 @@ import {
 } from "@studio/ExternalVideo";
 import { Button } from "@/app/_components/Button/Button";
 import { TeaserCard, TeaserDefinition } from "@/app/_studio/TeaserCard";
+import { CalloutBox, CalloutBoxDefinition } from "@/app/_studio/CalloutBox";
 
 defineComponents([
   {
@@ -54,6 +55,10 @@ defineComponents([
   {
     component: TeaserCard,
     definition: TeaserDefinition,
+  },
+  {
+    component: CalloutBox,
+    definition: CalloutBoxDefinition,
   },
   /*
    * After a new folder is created in '/_components' you need to register it below in a JSON format

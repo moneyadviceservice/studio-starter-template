@@ -1,5 +1,5 @@
-import { MODE } from '@/lib/constants';
-import Studio from '@/app/_studio/studio';
+import { MODE } from "@/lib/constants";
+import Studio from "@/app/_studio/studio";
 
 export default async function Home({
   params,
