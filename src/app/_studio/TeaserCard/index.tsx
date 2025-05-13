@@ -38,6 +38,9 @@ export const TeaserDefinition: ComponentDefinition = {
       type: "Text",
       displayName: "Title",
       defaultValue: "Teaser Card Title",
+      validations: {
+        bindingSourceType: ["manual"],
+      },
       group: "content",
     },
     actionButtonUrl: {
@@ -49,13 +52,18 @@ export const TeaserDefinition: ComponentDefinition = {
     actionButtonTitle: {
       type: "Text",
       displayName: "Action Button Title",
-      defaultValue: "Action Button Title",
+      validations: {
+        bindingSourceType: ["manual"],
+      },
       group: "content",
     },
     description: {
-      type: "Text",
+      type: "RichText",
       displayName: "Description",
-      defaultValue: "Teaser Card Description",
+
+      validations: {
+        bindingSourceType: ["manual"],
+      },
       group: "content",
     },
     image: {

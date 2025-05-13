@@ -1,8 +1,7 @@
 import { twMerge } from "tailwind-merge";
 import Image from "next/image";
 import { Document } from "@contentful/rich-text-types";
-
-import { RichText } from "@/app/_components/RichText";
+import { CtfText } from "@/app/_components/CtfText";
 
 export type CalloutBoxProps = {
   calloutTitle: string;
@@ -16,7 +15,7 @@ export const CalloutBox = ({
   description,
 }: CalloutBoxProps) => {
   return (
-    <div className="t-urgent-callout border-8 rounded-bl-3xl py-10 pl-6 pr-8 sm:p-10 flex border-yellow-200 mb-2">
+    <div className="t-urgent-callout border-8 rounded-bl-3xl py-10 pl-6 pr-8 sm:p-10 flex border-yellow-200">
       <div className="flex gap-3 sm:gap-6">
         <div>
           <div className={twMerge("text-pink-800", "sm:hidden", "-ml-8")}>
@@ -47,7 +46,7 @@ export const CalloutBox = ({
           <h5 className="text-lg md:text-xl text-gray-800 font-bold mb-4">
             {calloutTitle}
           </h5>
-          {description && <RichText content={description} />}
+          {description && <CtfText content={description} />}
         </div>
       </div>
     </div>

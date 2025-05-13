@@ -10,7 +10,7 @@ export const CalloutBoxDefinition: ComponentDefinition = {
     calloutTitle: {
       type: "Text",
       displayName: "Title",
-      defaultValue: "inline",
+      defaultValue: "Callout Box",
       group: "content",
     },
     id: {
@@ -21,6 +21,9 @@ export const CalloutBoxDefinition: ComponentDefinition = {
     description: {
       type: "RichText",
       displayName: "Description",
+      validations: {
+        bindingSourceType: ["manual"],
+      },
       group: "content",
     },
   },

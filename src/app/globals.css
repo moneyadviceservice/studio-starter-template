@@ -20,3 +20,7 @@ body {
 main {
   flex: 1;
 }
+
+.stripes {
+  background-image: url(/grey-stripe.png);
+}

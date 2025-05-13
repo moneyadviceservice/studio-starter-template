@@ -1,16 +1,18 @@
 import { twMerge } from "tailwind-merge";
+import { CtfText } from "@/app/_components/CtfText";
+import { Document } from "@contentful/rich-text-types";
+import Image from "next/image";
+import Link from "next/link";
 
 type TeaserProps = {
   type: "inline" | "stacked";
   variant: string;
   title: string;
-  description?: string;
+  description: Document;
   image?: string;
   actionButtonTitle?: string;
   actionButtonUrl: string;
 };
-import Image from "next/image";
-import Link from "next/link";
 
 export const TeaserCard = ({
   variant,
@@ -47,8 +49,8 @@ export const TeaserCard = ({
         )}
 
         <div className={twMerge(`py-4 space-y-3 pr-8`, !image && "pl-4")}>
-          <h4>{title}</h4>
-          <p>{description}</p>
+          <h5 className="text-pink-900 font-bold text-2xl">{title}</h5>
+          <CtfText content={description} />
           {actionButtonTitle && (
             <Link href={actionButtonUrl}>{actionButtonTitle}</Link>
           )}
@@ -68,7 +70,6 @@ export const TeaserCard = ({
         <Link
           href={actionButtonUrl}
           className={twMerge(
-            "container",
             "content-between",
             "gap-x-12",
             "hover:border-2",
