@@ -14,6 +14,7 @@ import { TeaserCard, TeaserDefinition } from "@/app/_studio/TeaserCard";
 import { CalloutBox, CalloutBoxDefinition } from "@/app/_studio/CalloutBox";
 import { Section, SectionDefinition } from "@/app/_studio/Section";
 import { CtfRichText, CtfRichTextDefinition } from "@/app/_studio/CtfRichText";
+import { Divider, DividerDefinition } from "@/app/_studio/Divider";
 
 defineComponents([
   {
@@ -69,6 +70,10 @@ defineComponents([
   {
     component: CtfRichText,
     definition: CtfRichTextDefinition,
+  },
+  {
+    component: Divider,
+    definition: DividerDefinition,
   },
   /*
    * After a new folder is created in '/_components' you need to register it below in a JSON format

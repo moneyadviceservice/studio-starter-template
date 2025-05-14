@@ -22,8 +22,8 @@ export const CalloutBox = ({
             <Image
               src="/arrow-brand-straight.svg"
               alt="Arrow Brand Straight"
-              width={64}
-              height={48}
+              width={51}
+              height={79}
             />{" "}
           </div>
           <div
@@ -37,13 +37,13 @@ export const CalloutBox = ({
             <Image
               src="/arrow-brand-curved.svg"
               alt="Arrow Brand Curved"
-              width={48}
-              height={88}
+              width={80}
+              height={80}
             />
           </div>
         </div>
         <div>
-          <h5 className="text-lg md:text-xl text-gray-800 font-bold mb-4">
+          <h5 className="text-lg md:text-xl text-pink-900 font-bold mb-4">
             {calloutTitle}
           </h5>
           {description && <CtfText content={description} />}

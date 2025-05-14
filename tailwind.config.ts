@@ -15,6 +15,9 @@ const config: Config = {
       container: {
         center: true,
       },
+      fontFamily: {
+        sans: ["var(--font-roobert)", "sans-serif"],
+      },
     },
   },
   plugins: [],

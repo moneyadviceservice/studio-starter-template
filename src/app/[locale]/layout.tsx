@@ -7,14 +7,16 @@ import localFont from "next/font/local";
 const font = localFont({
   src: [
     {
-      path: "../../../assets/fonts/roobert/Roobert-Regular.ttf",
+      path: "../../../public/fonts/roobert/Roobert-Regular.ttf",
       weight: "400",
     },
     {
-      path: "../../../assets/fonts/roobert/Roobert-Bold.ttf",
+      path: "../../../public/fonts/roobert/Roobert-Bold.ttf",
       weight: "700",
     },
   ],
+  display: "swap",
+  variable: "--font-roobert",
 });
 
 type Props = {
@@ -24,12 +26,11 @@ type Props = {
 
 export default function RootLayout({ children, breadcrumbs }: Props) {
   return (
-    <html lang="en" className={font.className}>
+    <html lang="en">
       <body>
         <Header />
         <Navigation />
         <main>{children}</main>
-
         <Footer />
       </body>
     </html>

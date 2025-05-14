@@ -1,0 +1,8 @@
+.text > p > a {
+  color: rgb(156 0 82);
+  text-decoration: underline;
+}
+
+.text > p > code {
+  font-family: "Inter", sans-serif;
+}

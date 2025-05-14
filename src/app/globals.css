@@ -24,3 +24,20 @@ main {
 .stripes {
   background-image: url(/grey-stripe.png);
 }
+
+li {
+  list-style: disc;
+  text-wrap: normal;
+  margin-left: 30px;
+  padding-bottom: 10px;
+}
+
+li::marker {
+  color: darkblue;
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin: 0;
+}

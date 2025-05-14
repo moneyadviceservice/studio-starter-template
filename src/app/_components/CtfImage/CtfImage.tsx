@@ -16,6 +16,7 @@ type ContentfulImageProps = {
 };
 
 export const CtfImage = ({ src }: ContentfulImageProps) => {
+  console.log("CtfImage", src);
   return (
     <Image
       src={`https:${src.fields.file.url}`}

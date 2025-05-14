@@ -48,7 +48,7 @@ export const TeaserCard = ({
           </div>
         )}
 
-        <div className={twMerge(`py-4 space-y-3 pr-8`, !image && "pl-4")}>
+        <div className={twMerge(`py-4 space-y-3 pr-8 px-6`, !image && "pl-4")}>
           <h5 className="text-pink-900 font-bold text-2xl">{title}</h5>
           <CtfText content={description} />
           {actionButtonTitle && (
@@ -63,6 +63,7 @@ export const TeaserCard = ({
     <div
       className={twMerge(
         "border-2 border-gray-200 rounded-lg shadow-md",
+        "font-roobert",
         variant === "whiteStyle" ? "bg-white" : "bg-gray-100"
       )}
     >

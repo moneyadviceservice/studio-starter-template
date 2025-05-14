@@ -1,8 +1,7 @@
 import { MODE } from "@/lib/constants";
 import Studio from "@/app/_studio/studio";
-import { capitiliseFirstletter } from "@/utils/utils";
 
-export default async function Home({
+export default async function BlogPage({
   params,
   searchParams,
 }: {
@@ -16,11 +15,13 @@ export default async function Home({
     <>
       <div className="stripes">
         <h1 className="text-3xl container px-4 font-bold py-8 mb-8">
-          {capitiliseFirstletter(slug?.split("-")?.join(" "))}
+          {slug?.split("-").join(" ")}
         </h1>
       </div>
-      <div className="container">
-        <Studio slug={slug} locale={locale} mode={mode} />
+      <div className="container p-4">
+        <main className="py-4">
+          <Studio slug={slug} locale={locale} mode={mode} />
+        </main>
       </div>
     </>
   );
