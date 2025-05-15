@@ -26,7 +26,7 @@ type Props = {
 
 export default function RootLayout({ children, breadcrumbs }: Props) {
   return (
-    <html lang="en">
+    <html lang="en" className={font.className}>
       <body>
         <Header />
         <Navigation />

@@ -31,7 +31,9 @@ export const CalloutBox = ({
               "text-pink-800",
               "hidden sm:block",
               "-mt-12",
-              "-ml-4"
+              "-ml-4",
+              "min-h-[80px]",
+              "min-w-[45px]"
             )}
           >
             <Image
@@ -39,6 +41,7 @@ export const CalloutBox = ({
               alt="Arrow Brand Curved"
               width={80}
               height={80}
+              className="object-contain w-full"
             />
           </div>
         </div>

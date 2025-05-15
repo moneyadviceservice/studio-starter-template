@@ -9,7 +9,7 @@ export interface CtfTextProps {
 
 export const CtfText = ({ content }: CtfTextProps) => {
   return (
-    <div className={`text space-y-6 whitespace-normal ${style.text}`}>
+    <div className={`text space-y-6 whitespace-normal leading-6 ${style.text}`}>
       {documentToReactComponents(content)}
     </div>
   );
